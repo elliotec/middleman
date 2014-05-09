@@ -5,9 +5,9 @@ gem "middleman-blog", "~> 3.5.2"
 gem "rack-contrib"
 
 # Sass toolkit
-gem 'bitters'
 gem 'bourbon'
 gem 'neat'
+gem 'redcarpet'
 
 # For feed.xml.builder
 gem "builder", "~> 3.0"

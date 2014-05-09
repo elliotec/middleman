@@ -1,8 +1,175 @@
 @charset "utf-8";
 
 @import "bourbon";
-@import "bitters/bitters";
 @import "neat";
-@import "partials/layout";
-@import "partials/nav";
-@import "partials/footer";
+
+$nephritis: #27ae60;
+$emerald: #2ecc71;
+$clouds: #ecf0f1;
+$darkgreen: #008900;
+
+body {
+  @include span-columns(12);
+  background: #fafafa;
+  color: #333;
+  font-family: 'Helvetica Neue', 'Helvetica', 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+}
+
+.header-cont {
+  @include span-columns(12);
+  position:fixed; 
+  top:0px;
+
+  header {
+    @include outer-container;
+    min-height: 48px;
+    font-family: 'Oxygen', sans-serif;
+    background-color: $emerald;
+
+    nav {
+      @include span-columns(3);
+      @include shift(6);
+      margin-top: 10px;
+
+      li {
+        display: inline;
+      }
+      
+      a {
+        padding: 9px;
+        text-decoration: none;
+        color: $clouds;
+      }
+
+      a:hover {
+        background-color: $nephritis;
+      }
+    }
+
+    .logo {
+      @include span-columns(3);
+      color: $clouds;
+      font-size: 30px;
+      padding: 5px;
+      text-decoration: none;
+    }
+  }
+}
+
+.homehead {
+  @include span-columns(12);
+  padding: 50px;
+  font-family: 'Oxygen', 'Open Sans', sans-serif;
+  background-color: $nephritis;
+  color: $clouds;
+
+  h1 {
+    @include span-columns(7);
+    @include shift(3);
+    font-weight: 700;
+    font-size: 100px;
+  }
+
+  h3 {
+    @include span-columns(6);
+    @include shift(3);
+    font-weight: 400;
+    font-size: 45px;
+    position:relative;
+    left: 70px;
+  }
+}
+
+.post {
+  @include outer-container;
+  margin-top: 60px;
+
+  .post-content {
+    @include span-columns(6);
+    @include shift(3);
+
+    .posts {
+      @include span-columns(6);
+      @include shift(3);
+      text-align: center;
+      margin-top: 30px;
+
+      li {
+        list-style-type: none;
+        font-size: 35px;
+      }
+    }
+    
+    #date {
+      font-size: 18px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 10px;
+      font-weight: 500;
+      font-size: 60px;
+      border-bottom: 2px solid #333;
+      padding-bottom: 20px;
+
+      a {
+        text-decoration: none;
+      }
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 70px;
+      font-weight: 400;
+    }
+
+    h3 {
+      margin-top: 20px;
+      font-size: 35px;
+      font-weight: 500;
+    }
+
+    a, a:visited {
+      color: $nephritis;
+    }
+    a:hover {
+      color: #888;  
+    }
+
+    p {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      line-height: 40px;
+    }
+
+    li {
+      padding-top: 5px;
+      padding-bottom: 5px;
+      line-height: 35px;
+    }
+
+    ol {
+      list-style: decimal;
+    }
+
+    ul {
+      list-style: disc;
+    }
+
+    blockquote {
+      margin: 40px;
+      p {
+        font-style: italic;
+        font-size: 30px;
+        line-height: 30px;
+      }
+    }
+  }
+}
+
+footer {
+  margin: 2em 0;
+  padding-top: 2em;
+}
