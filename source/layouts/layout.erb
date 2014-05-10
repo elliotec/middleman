@@ -10,13 +10,12 @@
     <meta name="description" content="The personal blog and portfolio of Michael Elliott.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>elliotec<%= ' - ' + current_article.title unless current_article.nil? %></title>
-    <link href='http://fonts.googleapis.com/css?family=Oxygen:400,300,700'
-    rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Nunito:400,700,300' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
     <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
     <%= stylesheet_link_tag "normalize", "rouge", "all" %>
-
-    <script src="/javascripts/modernizr.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <%= javascript_include_tag "modernizr", "main" %>
   </head>
   <body>
     
