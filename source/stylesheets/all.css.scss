@@ -1,6 +1,7 @@
 @charset "utf-8";
 
 @import "bourbon";
+@import "bitters/bitters";
 @import "neat";
 
 $nephritis: #27ae60;
@@ -18,6 +19,10 @@ body {
   font-size: 25px;
 }
 
+.wrapper {
+  @include outer-container;
+}
+
 .header-cont {
   @include span-columns(12);
   position:fixed; 
@@ -25,21 +30,21 @@ body {
 
   header {
     @include outer-container;
-    min-height: 48px;
+    min-height: 50px;
     font-family: 'Oxygen', sans-serif;
     background-color: $monokai;
 
     nav {
       @include span-columns(3);
       @include shift(6);
-      margin-top: 8px;
+      margin-top: 5px;
 
       li {
         display: inline;
       }
       
       a {
-        padding: 8px;
+        padding: 2px;
         text-decoration: none;
         color: $nephritis;
       }
@@ -53,8 +58,8 @@ body {
     .logo {
       @include span-columns(3);
       color: $nephritis;
-      font-size: 30px;
-      padding: 5px;
+      font-size: 45px;
+      padding: 2px;
       text-decoration: none;
     }
   }
