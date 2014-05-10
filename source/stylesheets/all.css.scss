@@ -7,6 +7,7 @@ $nephritis: #27ae60;
 $emerald: #2ecc71;
 $clouds: #ecf0f1;
 $darkgreen: #008900;
+$monokai: #49483E;
 
 body {
   @include span-columns(12);
@@ -26,31 +27,32 @@ body {
     @include outer-container;
     min-height: 48px;
     font-family: 'Oxygen', sans-serif;
-    background-color: $emerald;
+    background-color: $monokai;
 
     nav {
       @include span-columns(3);
       @include shift(6);
-      margin-top: 10px;
+      margin-top: 8px;
 
       li {
         display: inline;
       }
       
       a {
-        padding: 9px;
+        padding: 8px;
         text-decoration: none;
-        color: $clouds;
+        color: $nephritis;
       }
 
       a:hover {
+        color: $monokai;
         background-color: $nephritis;
       }
     }
 
     .logo {
       @include span-columns(3);
-      color: $clouds;
+      color: $nephritis;
       font-size: 30px;
       padding: 5px;
       text-decoration: none;
@@ -63,7 +65,7 @@ body {
   padding: 50px;
   font-family: 'Oxygen', 'Open Sans', sans-serif;
   background-color: $nephritis;
-  color: $clouds;
+  color: $monokai;
 
   h1 {
     @include span-columns(7);
@@ -86,9 +88,20 @@ body {
   @include outer-container;
   margin-top: 60px;
 
+  pre, code {
+    padding: 8px 12px;
+    border-radius: 3px;
+    font-size: 16px;
+    font-family: "Lucida Console", Monaco, monospace;
+  }
+
   .post-content {
-    @include span-columns(6);
-    @include shift(3);
+    @include span-columns(8);
+    @include shift(2);
+
+    ul, ol { 
+      padding-left: 40px; 
+    }
 
     .posts {
       @include span-columns(6);

@@ -30,13 +30,13 @@ It uses the [Liquid Templating Engine](http://liquidmarkup.org/), which is a "Ru
 
 Jekyll has another useful feature - its "Front Matter." Basically you put two sets of triple dashes at the top of your file with or without a valid YAML set in between them, like this: 
 
-{% highlight yaml %}
+```yaml
 ---
 layout: post
 title:  "Creating This Site"
 date:   2014-04-17 01:26:11
 ---
-{% endhighlight %}
+```
 
 and Jekyll processes that as a "special file" where you can define variables, use Liquid tags, and even write Sass and Coffeescript (*this ability is new as of the 2.0.0 development version*).
 
