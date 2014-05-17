@@ -10,6 +10,10 @@ $clouds: #ecf0f1;
 $darkgreen: #008900;
 $monokai: #49483E;
 
+body {
+  
+}
+
 .wrapper {
   @include outer-container;
 }
@@ -200,6 +204,17 @@ header.navigation {
   }
 }
 
+.homehead {
+  @include clearfix;
+  @include span-columns(6);
+  @include shift(3);
+  text-align: center;
+
+  h1 {
+    font-size: 4.5em;
+  }
+}
+
 article.type-system-rounded {
   $sans-serif: 'Nunito', sans-serif;
   $sans-serif-2: 'Varela Round', sans-serif;
@@ -302,7 +317,7 @@ article.type-system-rounded {
   border-radius: .3em;
   font-size: .9em;
   font-family: "Lucida Console", Monaco, monospace;
-}
+  }
 }
 
 
