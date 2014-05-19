@@ -1,0 +1,83 @@
+#projects {
+  background-color: #ddd;
+  @mixin grid-item-columns($columns) {
+  width: (100% / 12) * $columns;
+}
+
+.grid-items {
+  $grid-items-background: #ddd;
+  $grid-item-background: $base-body-color;
+  $grid-item-border-size: 9px;
+  $grid-item-columns: 6;
+  $grid-item-big-columns: 8;
+  $grid-item-color: white;
+  $grid-item-height: 20em;
+
+  @include clearfix;
+    
+  .grid-item {
+    @include transition (all 0.2s ease-in-out);
+    height: $grid-item-height;
+    background: $grid-item-background;
+    width: 100%;
+    overflow: hidden;
+    float: left;
+    border-top: 0;
+    border-bottom: $grid-item-border-size solid $grid-items-background;
+    border-left: $grid-item-border-size /2 solid $grid-items-background;
+    border-right: $grid-item-border-size /2 solid $grid-items-background;
+    cursor: pointer;
+
+    @include media($large-screen) {
+      @include grid-item-columns($grid-item-columns);
+    }
+  }
+}
+  .hover-tile-outer {
+    $hover-tile-height: 20em;
+
+    background-position: bottom;
+    background-size: cover;
+    background: url("https://raw.github.com/Magnus-G/Random/master/mountains.png");
+    background-size: cover;
+    background-color: #BEB56E;
+    border: 1px solid $base-border-color;
+    height: $hover-tile-height;
+    cursor: pointer;
+
+    .hover-tile-container {
+      height: $hover-tile-height;
+      overflow: hidden;
+    }
+
+    .hover-tile-container:hover > .hover-tile {
+      @include transform(translate(0, -100%));
+    }
+
+    .hover-tile {
+      @include transition(all, .2s ease-in-out);
+      background:inherit;
+      color: white;
+      height:inherit;
+      padding: 1em 1.5em;
+    }
+
+    .hover-tile-visible {
+      color: transparentize(white, .3);
+      font-size: 2em;
+      font-weight: 200;  
+      padding-top: 2em;
+      text-align: center;
+    }
+
+    .hover-tile-hidden {
+      background: transparentize(black, .5);
+      h4 {
+        margin-bottom: .5em;
+      }
+      p {
+        color: transparentize(white, .3);
+      }
+    }
+  }
+}

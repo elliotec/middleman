@@ -1,0 +1,26 @@
+#home {
+  background-color: #ddd;
+  
+  .intro {
+  @include span-columns(4);
+  @include shift(6);
+  position:relative;
+  bottom: 9em;
+  font-size: 1.5em;
+
+  h3 {
+    font-family: 'Varela Round', sans-serif;
+    color: $nephritis;
+    font-size: 1.6em;
+    }
+  }
+  .headshot {
+    @include span-columns(3);
+    @include shift(2);
+    clear: left;
+    border-radius: 4em;
+    position: relative;
+    top: 7em
+
+  }
+}

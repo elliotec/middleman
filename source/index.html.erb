@@ -1,36 +1,117 @@
-<section class="home">
+<section id="home">
+  <%= image_tag("/images/headshot.png", class: "headshot") %>
   <div class="intro">
     <h3>Hi, I'm Michael Elliott.</h3><br>
     <p>I'm a web developer &amp; designer known professionally and around the web as elliotec. I'm currently available for contract/consulting work or a full-time position.</p>
   </div>
-  <%= image_tag("/images/headshot.png", class: "headshot") %>
 </section>
-<section class="about">
-<h2>About Me</h2>
+<section id="about">
+  <h2>About Me</h2>
   <div class="grid-items-lines">
-    <a href="javascript:void(0)" class="grid-item">
+    <div class="grid-item">
       <h1>Development</h1>
-      <p>I use Ruby on Rails as my primary development framework for creating dynamic web applications. I will also occasionally use some front-end JavaScript frameworks like Ember or Angular.</p>
-    </a>
-    <a href="javascript:void(0)" class="grid-item grid-item">
+      <p>I use Ruby on Rails as my primary development framework for creating dynamic web applications. I also occasionally use front-end JavaScript frameworks like Ember or Angular.</p>
+    </div>
+    <div class="grid-item">
       <h1>Design</h1>
-      <p>My first exposure to coding was building static HTML &amp; CSS sites from scratch. Now I primarily use HTML5 &amp; Sass with helpers like Bourbon, Neat, and Bitters. Depending on the project I might also use a customizable template or Bootstrap.</p>
-    </a>
-    <a href="javascript:void(0)" class="grid-item">
-      <h1>Another Grid Item</h1>
-      <p>Lorem ipsum dolor sit amet, elit.</p>
-    </a>
-    <a href="javascript:void(0)" class="grid-item">
-      <h1>A Grid Item</h1>
-      <p>Lorem ipsum dolor sit amet, elit. Rem, illum.</p>
-    </a>
-    <a href="javascript:void(0)" class="grid-item">
-      <h1>Item</h1>
-      <p>Lorem ipsum dolor sit amet, elit. Rem, illum.</p>
-    </a>
-    <a href="javascript:void(0)" class="grid-item">
-      <h1>Last Grid Item</h1>
-      <p>Lorem ipsum dolor sit amet, elit. Rem, illum.</p>
-    </a>
+      <p>I use HTML5 &amp; SCSS with help from Bourbon, Neat, and Bitters. Sometimes I use customizable templates or Bootstrap. jQuery is a go-to for moving stuff around the page.</p>
+    </div>
+    <div class="grid-item">
+      <h1>Deployment</h1>
+      <p>Heroku makes deployment super easy, but I also use AWS, Nginx, Passenger, Chef, Digital Ocean, and Site44 for production. My favorite DNS providers are DNSimple and IWantMyName.</p>
+    </div>
+    <div class="grid-item">
+      <h1>Integration</h1>
+      <p>I have experience with iOS - web integration, building API's, and integrating hardware with software. I love hardware too and use Arduino for prototyping.</p>
+    </div>
+    <div class="grid-item">
+      <h1>Tools</h1>
+      <p>I use OSX and Linux for development. My text editors of choice are Sublime Text and Vim. I use Git for version-controll and spend lots of time on the command line. </p>
+    </div>
+    <div class="grid-item">
+      <h1>Hobbies</h1>
+      <p>I enjoy rock climbing, snowboarding, video games, ping-pong, friends, playing music, travelling, and a bunch of other stuff too.</p>
+    </div>
+    <div class="grid-item grid-item-big">
+      <h1>What all this means for you</h1>
+      <p>Have an app idea? Need a portfolio site? An info or ecommerce site for your new business? How about a full-time developer? I can rapidly prototype web applications with the whole package - development, design, and deployment - or help you on just about any project. I'm easy to work with and get straight to the point.</p>
+    </div>
+    <div class="right-cover"></div>
+    <div class="bottom-cover"></div>
   </div>
+</section>
+<section id="projects">
+  <h2>Some Projects</h2>
+  <div class="grid-items">
+  <a href="javascript:void(0)" class="grid-item">
+    <div class="hover-tile-outer">
+    <div class="hover-tile-container">
+      <div class="hover-tile hover-tile-visible">
+        Hover
+      </div>
+      <div class="hover-tile hover-tile-hidden">
+        <h4>Hidden Copy</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, hic, dolore, labore,provident eligendi fugiat ad exercitationem.</p>
+      </div>
+    </div>
+  </div>
+  </a>
+  <a href="javascript:void(0)" class="grid-item">
+    <div class="hover-tile-outer">
+    <div class="hover-tile-container">
+      <div class="hover-tile hover-tile-visible">
+        Hover
+      </div>
+      <div class="hover-tile hover-tile-hidden">
+        <h4>Hidden Copy</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, hic, dolore, labore,provident eligendi fugiat ad exercitationem.</p>
+      </div>
+    </div>
+  </div>
+  </a>
+  <a href="javascript:void(0)" class="grid-item">
+    <div class="hover-tile-outer">
+    <div class="hover-tile-container">
+      <div class="hover-tile hover-tile-visible">
+        Hover
+      </div>
+      <div class="hover-tile hover-tile-hidden">
+        <h4>Hidden Copy</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, hic, dolore, labore,provident eligendi fugiat ad exercitationem.</p>
+      </div>
+    </div>
+  </div>
+  </a>
+  <a href="javascript:void(0)" class="grid-item">
+    <div class="hover-tile-outer">
+    <div class="hover-tile-container">
+      <div class="hover-tile hover-tile-visible">
+        Hover
+      </div>
+      <div class="hover-tile hover-tile-hidden">
+        <h4>Hidden Copy</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, hic, dolore, labore,provident eligendi fugiat ad exercitationem.</p>
+      </div>
+    </div>
+  </div>
+  </a>
+</div>
+
+  
+  
+</section>
+<section id="posts">
+  <h2>Posts</h2>
+  <ul>
+    <% blog.articles.each do |post| %>
+    <li class = "post-item">
+      <%= link_to(post.title, post.url)%>
+      <span class = "post-date"><%= post.date.strftime('%b %e, %Y') %></span>
+    </li>
+    <% end %>
+  </ul>
+  
+</section>
+<section id="contact">
+  <h2>Contact</h2>
 </section>
