@@ -8,6 +8,7 @@
 @import "about";
 @import "projects";
 @import "posts";
+@import "contact";
 
 @mixin vertical-align {
   position: relative;
@@ -19,8 +20,7 @@
 
 section {
   display: block;
-  height: 50em;
-  margin-top: -1.5em;
+  height: 55em;
 
   h2 {
     font-family:'Varela Round', sans-serif;
@@ -29,4 +29,11 @@ section {
     padding: 1em;
     color: $nephritis;
   }
+}
+
+a.anchor {
+  display: block;
+  position: relative;
+  top: -60px;
+  visibility: hidden;
 }

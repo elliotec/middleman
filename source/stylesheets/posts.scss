@@ -1,5 +1,15 @@
 #posts {
+  height: 25em;
+  text-align: center;
 
+  .post-item {
+    font-size: 2em;
+    padding: .2em;
+  }
+  .post-date {
+    font-size: .7em;
+    padding: 1em;
+  }
 }
 
 article.type-system-rounded {

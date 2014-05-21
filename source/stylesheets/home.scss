@@ -1,5 +1,6 @@
 #home {
   background-color: #ddd;
+  margin-top: -1.5em;
   
   .intro {
   @include span-columns(4);
