@@ -1,3 +1,10 @@
 #contact {
-  background-color: #ddd;
+  background-color: $lightwhite;
+
+  .button {
+    @include span-columns(2);
+    @include shift(5);
+    @extend %button;
+    margin-top: 2em;
+  }
 }
