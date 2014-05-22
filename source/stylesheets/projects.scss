@@ -1,11 +1,11 @@
-#projects {
+.projects {
   background-color: $lightwhite;
   @mixin grid-item-columns($columns) {
   width: (100% / 12) * $columns;
 }
 
 .grid-items {
-  $grid-items-background: #ddd;
+  $grid-items-background: $lightwhite;
   $grid-item-background: $base-body-color;
   $grid-item-border-size: 9px;
   $grid-item-columns: 6;

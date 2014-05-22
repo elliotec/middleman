@@ -1,5 +1,6 @@
-#contact {
+.contact {
   background-color: $lightwhite;
+  height: 31em;
 
   .button {
     @include span-columns(2);

@@ -1,4 +1,4 @@
-#posts {
+.posts {
   height: 25em;
   text-align: center;
 
@@ -20,6 +20,7 @@ article.type-system-rounded {
   @include span-columns(6);
   @include shift(3);
   text-align: left;
+  margin-bottom: 5em;
 
   .type {
     border-bottom: 1px solid;
@@ -82,6 +83,18 @@ article.type-system-rounded {
       text-transform: uppercase;
       font-size: 0.8em;
     }
+  }
+
+  ol li {
+    list-style-type: decimal;
+    margin-left: 1.5em;
+    margin-bottom: 1em;
+  }
+
+  ul li {
+    list-style-type: disc;
+    margin-left: 1.5em;
+    margin-bottom: 1em;
   }
 
   a.read-more {

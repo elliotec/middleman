@@ -1,6 +1,11 @@
 <% wrap_layout :layout do %>
+  <header class="navigation">
+    <div class="menu-wrapper">
+      <%= link_to "{ elliotec }", "/index.html", class: 'logocenter' %>
+    </div>
+  </header>
   <article class="type-system-rounded">
     <h1><%= current_page.title %></h1>
-    <%= yield %>
+      <%= yield %>
   </article>
 <% end %>
