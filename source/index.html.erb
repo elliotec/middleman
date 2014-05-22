@@ -37,15 +37,15 @@
     </div>
     <div class="grid-item">
       <h1>Design</h1>
-      <p>I use HTML5 &amp; SCSS with help from Bourbon, Neat, and Bitters. Sometimes I use customizable templates or Bootstrap. jQuery is a go-to for moving stuff around the page.</p>
+      <p>I use HTML5 &amp; SCSS, often with help from Bourbon, Neat, and Bitters. Sometimes I use customizable templates or Bootstrap. jQuery is a go-to for moving stuff around the page.</p>
     </div>
     <div class="grid-item">
       <h1>Deployment</h1>
-      <p>Heroku makes deployment super easy, but I also use AWS, Nginx, Passenger, Chef, Digital Ocean, and Site44 for production. My favorite DNS providers are DNSimple and IWantMyName.</p>
+      <p>Heroku makes deployment super easy, but I also use AWS, Nginx, Passenger, Chef, Digital Ocean, and Site44 for production. My favorite DNS providers are NameCheap and IWantMyName.</p>
     </div>
     <div class="grid-item">
       <h1>Integration</h1>
-      <p>I have experience with iOS - web integration, building API's, and integrating hardware with software. I love hardware and use Arduino for prototyping.</p>
+      <p>I have experience with iOS and hardware integration, building APIs, and consuming APIs. I love hardware and use Arduino for prototyping.</p>
     </div>
     <div class="grid-item">
       <h1>Tools</h1>
@@ -131,8 +131,8 @@
     <% blog.articles.each do |post| %>
     <li class = "post-item">
       <%= link_to(post.title, post.url)%>
-      <span class = "post-date"><%= post.date.strftime('%b %e, %Y') %></span>
     </li>
+      <p id='date'><%= post.date.strftime('%B %d, %Y') %></p>
     <% end %>
   </ul>
 </section>

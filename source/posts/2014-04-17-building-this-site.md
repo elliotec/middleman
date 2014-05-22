@@ -4,7 +4,7 @@ title:  "Building This Site"
 date:   2014-04-17 11:26:11
 ---
 
-### Blogging platforms vs. static site generators
+## Blogging platforms vs. static site generators
 
 I had been looking around for a good way to get a portfolio site and blogging platform all in one that suited my tastes. 
 
@@ -45,5 +45,5 @@ Now I could finally get to the fun part and design my site. I came accross these
 
 *Though I had long admired Thoughtbot for their amazing work and invaluable blog content, this post in particular sent me down a rabbit hole that guided my evolution into a bona fide Thoughtbot fanboy. Seriously.*
 
-What you see here is the result of this process. In a future post, I'll describe some of the methodology I used in the site's creation and give some code samples and tips I found useful in it's development.
+What you see here is the result of this process. In a future post, I'll describe some of the methodology I used in the site's creation and give some code samples and tips I found useful in it's development. In the meantime, check out the code on [my Github](http://github.com/elliotec/middleman) if you wish.
 
